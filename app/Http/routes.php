@@ -13,7 +13,9 @@
 Route::get('profile' , 'UserController@profilephoto');
 Route::post('profile', 'UserController@update_avatar');
 Route::get('req/{str}', 'UserController@searchinfo');
-
+Route::get('about' , 'UserController@about');
+Route::get('contact','UserController@contact');
+Route::post('feedback','UserController@feedback');
 Route::get('/', function () {
 	if(Auth::guest())return view('welcome');
 	else return redirect('/home');

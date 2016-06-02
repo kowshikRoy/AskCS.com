@@ -16,6 +16,7 @@
 @if($post)
   <div>
     {!! $post->body !!}
+    <hr>
   </div>    
   <div>
     <h2>Leave a comment</h2>

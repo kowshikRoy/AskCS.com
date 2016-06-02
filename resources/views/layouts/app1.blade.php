@@ -39,7 +39,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
+                <img src="/icon.jpg" style="width:35px; height:35px; position:absolute; top:10px; left:100px; border-radius:50%">
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
                     AskCS.com
@@ -103,11 +103,62 @@
     </nav>
     @yield('content')
     
-
+    
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
     
+    <!-- Footer -->
+    
+    <hr>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-center" style="position: absolute; left: 640px;">
+        <li>
+            <a href="about">About Us</a>
+        </li>
+        <li>
+            <a href="contact">FeedBack</a>
+        </li>
+    </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+            <div class="row" style="position: absolute; left: 640px;>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://www.facebook.com/RiboTintel-1700844790182745/timeline">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/RiboTintel-1700844790182745/timeline">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://gitlab.com/kowshikRoy/AskCS.com">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; 2016 | AskCS.com</p></p>
+                </div>
+            </div>
+        </div>
+
+
 </body>
 </html>
