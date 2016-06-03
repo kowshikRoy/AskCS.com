@@ -10,12 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('profile' , 'UserController@profilephoto');
-Route::post('profile', 'UserController@update_avatar');
-Route::get('req/{str}', 'UserController@searchinfo');
-Route::get('about' , 'UserController@about');
-Route::get('contact','UserController@contact');
-Route::post('feedback','UserController@feedback');
+
 Route::get('/', function () {
 	if(Auth::guest())return view('welcome');
 	else return redirect('/home');
@@ -25,9 +20,16 @@ Route::get('/', function () {
 Route::auth();
 
 //Route::get('/home', 'HomeController@index');
-Route::get('/home',['as' => 'home', 'uses' => 'PostController@index']);
+
 Route::group(['middleware' => ['auth']], function()
 {
+	Route::get('/home',['as' => 'home', 'uses' => 'PostController@index']);
+	Route::get('profile' , 'UserController@profilephoto');
+	Route::post('profile', 'UserController@update_avatar');
+	Route::get('req/{str}', 'UserController@searchinfo');
+	Route::get('about' , 'UserController@about');
+	Route::get('contact','UserController@contact');
+	Route::post('feedback','UserController@feedback');
 	Route::get('searchbypostinput','PostController@searchbypostin');
 	Route::get('searchbyuserinput','PostController@searchbyuserin');
 	Route::get('new-post','PostController@create');
